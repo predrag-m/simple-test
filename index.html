@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Document</title>
 </head>
 
@@ -21,7 +22,7 @@
             const endDate = "2024-12-06T19:15:40-05:00";
             const kevzhuUrl = "http://192.210.243.30:8000/api/rs/history";
             const requestQuery = `${kevzhuUrl}?start_date=${startDate}&end_date=${endDate}`;
-            console.log(requestQuery);  // temp
+            // console.log(requestQuery);  // temp
             try {
                 const response = await fetch(requestQuery, {
                     method: "GET",
